@@ -1,0 +1,9 @@
+.movie-search-form {
+  display: flex;
+  align-content: center;
+  padding-bottom: 1em;
+}
+
+.movie-search-form-input {
+  width: 100%;
+}

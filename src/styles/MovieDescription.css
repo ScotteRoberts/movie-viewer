@@ -1,0 +1,18 @@
+.movie-description-info {
+  padding: 0rem 1rem;
+}
+
+.back-drop-image-container {
+  overflow: hidden;
+}
+
+.back-drop-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.member-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  grid-gap: 1em;
+}
