@@ -17,13 +17,11 @@ class MovieSearch extends React.Component {
     return (
       <aside className="movie-search">
         <MovieSearchForm handleMovieSearch={handleMovieSearch} />
-        {searchData.results ? (
-          searchData.results.map((result, i) => (
-            <MovieSearchResult key={i} result={result} handleSelectMovie={handleSelectMovie} />
-          ))
-        ) : (
-          <h3>No Values</h3>
-        )}
+        {searchData.results
+          ? searchData.results.map((result, i) => (
+              <MovieSearchResult key={i} result={result} handleSelectMovie={handleSelectMovie} />
+            ))
+          : ''}
       </aside>
     );
   }

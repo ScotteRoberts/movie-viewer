@@ -28,6 +28,7 @@ class MovieSearchForm extends React.Component {
           type="text"
           name="search"
           placeholder="Search"
+          size="35"
           value={this.state.searchTextValue}
           onChange={this.handleChange}
         />

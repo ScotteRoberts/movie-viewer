@@ -7,13 +7,13 @@ function MovieSearchResult({ result, handleSelectMovie }) {
     <button className="movie-search-result" onClick={() => handleSelectMovie(result)}>
       <img
         className="movie-search-result-image"
-        src={`https://image.tmdb.org/t/p/w185/${result.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w342/${result.poster_path}`}
         alt={`${result.title} poster`}
       />
-      {/* <div className="search-result-text-container">
+      <div className="search-result-text-container">
         <h3>{result.title}</h3>
-        <span>{result.release_date}</span>
-      </div> */}
+        <h4>{result.release_date}</h4>
+      </div>
     </button>
   );
 }

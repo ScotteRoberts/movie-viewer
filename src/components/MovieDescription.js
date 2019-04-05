@@ -5,23 +5,27 @@ import '../styles/MovieDescription.css';
 
 const MovieDescription = ({ selectedMovie }) => {
   const { details, cast, crew } = selectedMovie;
-  if (!details.title || details.title === '')
+  if (!details.title || details.title === '') {
     return (
-      <section>
-        <h1>Nothing Selected</h1>
+      <section className="movie-description">
+        <div className="movie-card-container" />
       </section>
     );
+  }
+  const backgroundImage = {
+    backgroundImage: `linear-gradient(to bottom right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(https://image.tmdb.org/t/p/original${
+      details.backdrop_path
+    })`,
+  };
   return (
-    <div>
-      <div className="back-drop-image-container">
-        <img
-          className="back-drop-image"
-          src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`}
-          alt={`${details.title} backdrop`}
-        />
+    <section className="movie-description">
+      <div className="movie-card-container" style={backgroundImage}>
+        <div className="movie-card-info">
+          <h1>{`${details.title} (${details.release_date.substring(0, 4)})`}</h1>
+        </div>
       </div>
-      <section className="movie-description-info">
-        <h1>{`${details.title} (${details.release_date.substring(0, 4)})`}</h1>
+
+      <article className="movie-description-details">
         <h2>Overview</h2>
         <p>{details.overview ? details.overview : 'No overview provided.'}</p>
         <h2>Featured Crew</h2>
@@ -36,8 +40,8 @@ const MovieDescription = ({ selectedMovie }) => {
             <MovieMemberIcon key={i} member={member} />
           ))}
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
   );
 };
 

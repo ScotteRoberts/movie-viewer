@@ -1,17 +1,19 @@
 .movie-search-result {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
   padding: 0;
   margin: 0px;
   width: 100%;
 }
 
-.movie-search-result-image {
-  width: 100%;
+.movie-search-result:active {
+  filter: brightness(75%);
 }
 
-.movie-search-result-image:active {
-  filter: brightness(50%);
+.movie-search-result-image {
+  width: 100%;
 }
 
 .search-result-text-container {
