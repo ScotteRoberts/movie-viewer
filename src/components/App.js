@@ -52,6 +52,7 @@ class App extends Component {
   render() {
     return (
       <main className="app">
+        <h1>Movie Viewer</h1>
         <MovieDescription className="movie-description" selectedMovie={this.state.selectedMovie} />
         <MovieSearch
           className="movie-search"

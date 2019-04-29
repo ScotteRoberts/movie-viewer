@@ -1,7 +1,22 @@
 .app {
   display: grid;
+  grid-template-areas:
+    'header header'
+    'description search';
   grid-template-columns: 0.8fr 0.2fr;
   grid-gap: 1rem;
+}
+
+.app > h1 {
+  grid-area: header;
+}
+
+.movie-description {
+  grid-area: description;
+}
+
+.movie-search {
+  grid-area: search;
 }
 
 /* TODO: Add some media query to change to a one column layout on mobile */

@@ -8,7 +8,9 @@ const MovieDescription = ({ selectedMovie }) => {
   if (!details.title || details.title === '') {
     return (
       <section className="movie-description">
-        <div className="movie-card-container" />
+        <div className="movie-card-container">
+          <p>Please search on the right, then click on any movie to view its description.</p>
+        </div>
       </section>
     );
   }

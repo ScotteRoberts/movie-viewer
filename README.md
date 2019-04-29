@@ -1,68 +1,53 @@
+# Movie Viewer
+
+## Problem Description
+
+Take-home test for a React interview
+
+### Task
+
+1. Implement a front-end for a search service that searches through an collection of movie resources. _(retrieved from the movie endpoint)_ and returns a list of matching results.
+2. The right pane is where the user would be searching in a Textfield
+3. Searching for ‘Batman’ should return any movie with the words Batman on the right pane.
+4. Once a movie title is selected on the right it should display the detail page on the left pane.
+
+**See the included mockup** for a sample of what the final result should look like.
+
+Assume the API might be slow.
+
+### API
+
+The root URL of the API is available here: https://clutter-front-end-interview.herokuapp.com. So, to get information about a movie with ID=123, you can go to https://clutter-front-end-interview.herokuapp.com/movies/123.json
+
+There is a movie resource, and castmember resource which belongs to movie, and movie has many cast members.
+
+#### Task Notes
+
+- In the data provided there are two tables `Movie` and `CastMember`, you can access the index for these resources from their respective enpoints `/movies.json` and `/movies/<id>/cast_members.json`. Note that the cast_members.json endpoint doesn't have data for all movies. Some movies with data are 'Spider-Man 3', 'One Flew Over the Cuckoo's Nest', and 'Jason Bourne'. Please also note that some images for cast members may be missing, that is okay.
+
+- The /movies.json endpoint can accept search terms in the following way:
+  `/movies.json?q[title_cont]=your-search-term`. the specs/controllers directory has a working example of a search operation.
+
+### Mock up
+
+_note: treat this as a wireframe - feel free to theme it in a modern, professional fashion._
+
+![Mock Up](src/assets/img/mockup.png)
+
+## Problem Solution
+
+### Necessary Changes
+
+The API given in the problem set was not working as expected and would not return results. Therefore, I decided to use [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) API to get my results.
+
+Certain layout changes were made under my discretion for modern design.
+
+### Solution Screenshots
+
+![Ninja Batman 1](src/assets/img/batman-screenshot-1.png)
+![Ninja Batman 2](src/assets/img/batman-screenshot-2.png)
+![Ninja Batman 3](src/assets/img/batman-screenshot-3.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I hope you enjoyed❣️
