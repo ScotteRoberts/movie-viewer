@@ -32,6 +32,8 @@ class MovieSearchForm extends React.Component {
           value={this.state.searchTextValue}
           onChange={this.handleChange}
         />
+        {/* Add a button and hide it! */}
+        <button type="submit" style={{ display: 'none' }} />
       </form>
     );
   }
